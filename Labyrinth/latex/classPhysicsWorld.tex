@@ -1,0 +1,312 @@
+\hypertarget{classPhysicsWorld}{
+\section{PhysicsWorld Class Reference}
+\label{classPhysicsWorld}\index{PhysicsWorld@{PhysicsWorld}}
+}
+
+
+Class to set physics for the world an objects to be used in NGLDRaw.  
+
+
+{\ttfamily \#include $<$include/PhysicsWorld.h$>$}\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structPhysicsWorld_1_1Body}{Body}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPhysicsWorld_ae7aea476bf3c5d337a4fa5c1ff02f5d4}{PhysicsWorld} ()
+\begin{DoxyCompactList}\small\item\em ctor, this should really be a singleton as we have quite a few static members and only one world \item\end{DoxyCompactList}\item 
+\hypertarget{classPhysicsWorld_abf1573b008b52b60a83a8f36cbdd51bc}{
+\hyperlink{classPhysicsWorld_abf1573b008b52b60a83a8f36cbdd51bc}{$\sim$PhysicsWorld} ()}
+\label{classPhysicsWorld_abf1573b008b52b60a83a8f36cbdd51bc}
+
+\begin{DoxyCompactList}\small\item\em dtor \item\end{DoxyCompactList}\item 
+\hypertarget{classPhysicsWorld_a2abd0187fc57fdef29022bc2f69980ea}{
+void \hyperlink{classPhysicsWorld_a2abd0187fc57fdef29022bc2f69980ea}{reset} ()}
+\label{classPhysicsWorld_a2abd0187fc57fdef29022bc2f69980ea}
+
+\begin{DoxyCompactList}\small\item\em reset the simulation (remove all geo etc) \item\end{DoxyCompactList}\item 
+void \hyperlink{classPhysicsWorld_af4360b1fd73bccb9daad2f0e2e010324}{removeBody} (unsigned int \_\-index)
+\begin{DoxyCompactList}\small\item\em remove rigid bodies \item\end{DoxyCompactList}\item 
+void \hyperlink{classPhysicsWorld_a0d04a6ac71656dbaa41394b3bfe9e4be}{setGravity} (float \_\-x, float \_\-y, float \_\-z)
+\begin{DoxyCompactList}\small\item\em set gravity \item\end{DoxyCompactList}\item 
+void \hyperlink{classPhysicsWorld_a2cdbd862a8cd35eed77772fa870a3d83}{setGravity} (ngl::Vec3 \_\-g)
+\begin{DoxyCompactList}\small\item\em set gravity \item\end{DoxyCompactList}\item 
+std::string \hyperlink{classPhysicsWorld_a68a706855bc60f6d404cfbab4ca0d8fa}{getBodyNameAtIndex} (unsigned int i) const 
+\begin{DoxyCompactList}\small\item\em returns string of the rigid body's name \item\end{DoxyCompactList}\item 
+void \hyperlink{classPhysicsWorld_af3c1088adc3402dccd48098468805008}{addGroundPlane} (const ngl::Vec3 \&\_\-pos, const ngl::Vec3 \&\_\-size)
+\begin{DoxyCompactList}\small\item\em physics for the ground plane \item\end{DoxyCompactList}\item 
+void \hyperlink{classPhysicsWorld_a18e222c2a3b752a4ca79534affc26677}{addMaze} (std::string \_\-shapeName, const ngl::Vec3 \&\_\-pos, float \_\-friction)
+\begin{DoxyCompactList}\small\item\em physics for the maze \item\end{DoxyCompactList}\item 
+void \hyperlink{classPhysicsWorld_ad5e2e567a83e27977fa57185640efea5}{addSphere} (std::string \_\-shapeName, const ngl::Vec3 \&\_\-pos, float \_\-friction)
+\begin{DoxyCompactList}\small\item\em physics for the ball \item\end{DoxyCompactList}\item 
+void \hyperlink{classPhysicsWorld_a780e7dba95f82c55de457f4dc4f942ec}{addCube} (std::string \_\-shapeName, const ngl::Vec3 \&\_\-pos)
+\begin{DoxyCompactList}\small\item\em physics for the cube (finish line) \item\end{DoxyCompactList}\item 
+void \hyperlink{classPhysicsWorld_a7c77049c55dd34a22437e961dbcf92bc}{step} (float \_\-time, float \_\-step)
+\begin{DoxyCompactList}\small\item\em to step through the simulation \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{classPhysicsWorld_aa70cfe601f4ee449c385027899e37b74}{getUserData} (unsigned int \_\-index)
+\begin{DoxyCompactList}\small\item\em user pointer \item\end{DoxyCompactList}\item 
+\hypertarget{classPhysicsWorld_a23a2c8693eb25ad28e13b66e95a7c573}{
+unsigned int \hyperlink{classPhysicsWorld_a23a2c8693eb25ad28e13b66e95a7c573}{getNumCollisionObjects} () const }
+\label{classPhysicsWorld_a23a2c8693eb25ad28e13b66e95a7c573}
+
+\begin{DoxyCompactList}\small\item\em returns number of collision objects \item\end{DoxyCompactList}\item 
+bool \hyperlink{classPhysicsWorld_ae3820a8785542fd19563ad1d507bb4d9}{contactTest} (unsigned int i, unsigned int j)
+\begin{DoxyCompactList}\small\item\em returns whether there is contact between two bodies (true/false) \item\end{DoxyCompactList}\item 
+ngl::Vec3 \hyperlink{classPhysicsWorld_a528a5fc5907a9bf3e8ab2bfe1be5b05f}{getPosition} (unsigned int \_\-index)
+\begin{DoxyCompactList}\small\item\em get position of a specific body \item\end{DoxyCompactList}\item 
+ngl::Mat4 \hyperlink{classPhysicsWorld_acef2efa13c576073a2a907709114422d}{getTransformMatrix} (unsigned int \_\-index)
+\begin{DoxyCompactList}\small\item\em get transform for specific body \item\end{DoxyCompactList}\item 
+int \hyperlink{classPhysicsWorld_aafb952042dbd62fff1de9447557c5b58}{getCollisionShape} (unsigned int \_\-index) const 
+\begin{DoxyCompactList}\small\item\em get collision shape for specific body \item\end{DoxyCompactList}\item 
+void \hyperlink{classPhysicsWorld_abfbb11f5d5222deea4306838b2fb7c5e}{setRot} (unsigned int \_\-index, btQuaternion \_\-rot)
+\begin{DoxyCompactList}\small\item\em set rotation for a specific body \item\end{DoxyCompactList}\item 
+void \hyperlink{classPhysicsWorld_aba35e36f54d2898d83b9fb57a1d00462}{setRotAboutOrigin} (unsigned int \_\-index, btQuaternion \_\-rot)
+\begin{DoxyCompactList}\small\item\em set rotation about the origin for a specific body \item\end{DoxyCompactList}\item 
+btQuaternion \hyperlink{classPhysicsWorld_a9e9d15147f52d67384d197bdbfddbedf}{getRotation} (unsigned int \_\-index)
+\begin{DoxyCompactList}\small\item\em get rotation of a specific body \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPhysicsWorld_a35188167a726cdd0118eff29042bd2bc}{
+btDefaultCollisionConfiguration $\ast$ \hyperlink{classPhysicsWorld_a35188167a726cdd0118eff29042bd2bc}{m\_\-collisionConfiguration}}
+\label{classPhysicsWorld_a35188167a726cdd0118eff29042bd2bc}
+
+\begin{DoxyCompactList}\small\item\em needed for setup for physics world \item\end{DoxyCompactList}\item 
+\hypertarget{classPhysicsWorld_aec63ab074f96cb9620fce3e11142fa90}{
+btCollisionDispatcher $\ast$ {\bfseries m\_\-dispatcher}}
+\label{classPhysicsWorld_aec63ab074f96cb9620fce3e11142fa90}
+
+\item 
+\hypertarget{classPhysicsWorld_a70b27b3c8e5ac9d49c988dcb10d2dbb9}{
+btBroadphaseInterface $\ast$ {\bfseries m\_\-overlappingPairCache}}
+\label{classPhysicsWorld_a70b27b3c8e5ac9d49c988dcb10d2dbb9}
+
+\item 
+\hypertarget{classPhysicsWorld_ada66c07b62f4d0d302b5db3630148984}{
+btSequentialImpulseConstraintSolver $\ast$ {\bfseries m\_\-solver}}
+\label{classPhysicsWorld_ada66c07b62f4d0d302b5db3630148984}
+
+\item 
+\hypertarget{classPhysicsWorld_a258646d396900c8fc301d4ec7090cfa2}{
+btDiscreteDynamicsWorld $\ast$ {\bfseries m\_\-dynamicsWorld}}
+\label{classPhysicsWorld_a258646d396900c8fc301d4ec7090cfa2}
+
+\item 
+\hypertarget{classPhysicsWorld_a8ca5d5cfae3ab66acc40bb705d1a955b}{
+btCollisionShape $\ast$ {\bfseries m\_\-groundShape}}
+\label{classPhysicsWorld_a8ca5d5cfae3ab66acc40bb705d1a955b}
+
+\item 
+\hypertarget{classPhysicsWorld_a31f6f65ace404661cc9954580fe3c64d}{
+std::vector$<$ \hyperlink{structPhysicsWorld_1_1Body}{Body} $>$ {\bfseries m\_\-bodies}}
+\label{classPhysicsWorld_a31f6f65ace404661cc9954580fe3c64d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to set physics for the world an objects to be used in NGLDRaw. \begin{DoxyAuthor}{Author}
+Faye Butler Modified from -\/ Jon Macey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/04/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPhysicsWorld_ae7aea476bf3c5d337a4fa5c1ff02f5d4}{
+\index{PhysicsWorld@{PhysicsWorld}!PhysicsWorld@{PhysicsWorld}}
+\index{PhysicsWorld@{PhysicsWorld}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{PhysicsWorld}]{\setlength{\rightskip}{0pt plus 5cm}PhysicsWorld::PhysicsWorld ()}}
+\label{classPhysicsWorld_ae7aea476bf3c5d337a4fa5c1ff02f5d4}
+
+
+ctor, this should really be a singleton as we have quite a few static members and only one world 
+
+collision configuration contains default setup for memory, collision setup. Advanced users can create their own configuration.
+
+use the default collision dispatcher. For parallel processing you can use a diffent dispatcher (see Extras/BulletMultiThreaded)
+
+btDbvtBroadphase is a good general purpose broadphase. You can also try out btAxis3Sweep.
+
+the default constraint solver. For parallel processing you can use a different solver (see Extras/BulletMultiThreaded) 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPhysicsWorld_a780e7dba95f82c55de457f4dc4f942ec}{
+\index{PhysicsWorld@{PhysicsWorld}!addCube@{addCube}}
+\index{addCube@{addCube}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{addCube}]{\setlength{\rightskip}{0pt plus 5cm}void PhysicsWorld::addCube (std::string {\em \_\-shapeName}, \/  const ngl::Vec3 \& {\em \_\-pos})}}
+\label{classPhysicsWorld_a780e7dba95f82c55de457f4dc4f942ec}
+
+
+physics for the cube (finish line) 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em shape}]name as a string \item[\mbox{$\leftarrow$} {\em position}]as a vec3 (x,y,z) \end{DoxyParams}
+\hypertarget{classPhysicsWorld_af3c1088adc3402dccd48098468805008}{
+\index{PhysicsWorld@{PhysicsWorld}!addGroundPlane@{addGroundPlane}}
+\index{addGroundPlane@{addGroundPlane}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{addGroundPlane}]{\setlength{\rightskip}{0pt plus 5cm}void PhysicsWorld::addGroundPlane (const ngl::Vec3 \& {\em \_\-pos}, \/  const ngl::Vec3 \& {\em \_\-size})}}
+\label{classPhysicsWorld_af3c1088adc3402dccd48098468805008}
+
+
+physics for the ground plane 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em vec3}]to show x, y and z position of the plane \item[\mbox{$\leftarrow$} {\em vec3}]for the size of the plane (width, height depth) \end{DoxyParams}
+\hypertarget{classPhysicsWorld_a18e222c2a3b752a4ca79534affc26677}{
+\index{PhysicsWorld@{PhysicsWorld}!addMaze@{addMaze}}
+\index{addMaze@{addMaze}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{addMaze}]{\setlength{\rightskip}{0pt plus 5cm}void PhysicsWorld::addMaze (std::string {\em \_\-shapeName}, \/  const ngl::Vec3 \& {\em \_\-pos}, \/  float {\em \_\-friction})}}
+\label{classPhysicsWorld_a18e222c2a3b752a4ca79534affc26677}
+
+
+physics for the maze 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em shape}]name as a string \item[\mbox{$\leftarrow$} {\em position}]as vec3 (x,y,z) \item[\mbox{$\leftarrow$} {\em friction}](read from config file) \end{DoxyParams}
+\hypertarget{classPhysicsWorld_ad5e2e567a83e27977fa57185640efea5}{
+\index{PhysicsWorld@{PhysicsWorld}!addSphere@{addSphere}}
+\index{addSphere@{addSphere}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{addSphere}]{\setlength{\rightskip}{0pt plus 5cm}void PhysicsWorld::addSphere (std::string {\em \_\-shapeName}, \/  const ngl::Vec3 \& {\em \_\-pos}, \/  float {\em \_\-friction})}}
+\label{classPhysicsWorld_ad5e2e567a83e27977fa57185640efea5}
+
+
+physics for the ball 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em shape}]name as a string \item[\mbox{$\leftarrow$} {\em position}]as vec3 (x,y,z) \item[\mbox{$\leftarrow$} {\em friction}](read from config file) \end{DoxyParams}
+\hypertarget{classPhysicsWorld_ae3820a8785542fd19563ad1d507bb4d9}{
+\index{PhysicsWorld@{PhysicsWorld}!contactTest@{contactTest}}
+\index{contactTest@{contactTest}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{contactTest}]{\setlength{\rightskip}{0pt plus 5cm}bool PhysicsWorld::contactTest (unsigned int {\em i}, \/  unsigned int {\em j})}}
+\label{classPhysicsWorld_ae3820a8785542fd19563ad1d507bb4d9}
+
+
+returns whether there is contact between two bodies (true/false) 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em number}]of the first specific collision object for contact test within array \item[\mbox{$\leftarrow$} {\em number}]of the second specific collision object for contact test within array \end{DoxyParams}
+\hypertarget{classPhysicsWorld_a68a706855bc60f6d404cfbab4ca0d8fa}{
+\index{PhysicsWorld@{PhysicsWorld}!getBodyNameAtIndex@{getBodyNameAtIndex}}
+\index{getBodyNameAtIndex@{getBodyNameAtIndex}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{getBodyNameAtIndex}]{\setlength{\rightskip}{0pt plus 5cm}std::string PhysicsWorld::getBodyNameAtIndex (unsigned int {\em i}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classPhysicsWorld_a68a706855bc60f6d404cfbab4ca0d8fa}
+
+
+returns string of the rigid body's name 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em number}]of the rigid body in vector of bodies (m\_\-bodies) \end{DoxyParams}
+\hypertarget{classPhysicsWorld_aafb952042dbd62fff1de9447557c5b58}{
+\index{PhysicsWorld@{PhysicsWorld}!getCollisionShape@{getCollisionShape}}
+\index{getCollisionShape@{getCollisionShape}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{getCollisionShape}]{\setlength{\rightskip}{0pt plus 5cm}int PhysicsWorld::getCollisionShape (unsigned int {\em \_\-index}) const}}
+\label{classPhysicsWorld_aafb952042dbd62fff1de9447557c5b58}
+
+
+get collision shape for specific body 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em number}]of specific collision object in array \end{DoxyParams}
+\hypertarget{classPhysicsWorld_a528a5fc5907a9bf3e8ab2bfe1be5b05f}{
+\index{PhysicsWorld@{PhysicsWorld}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{getPosition}]{\setlength{\rightskip}{0pt plus 5cm}ngl::Vec3 PhysicsWorld::getPosition (unsigned int {\em \_\-index})}}
+\label{classPhysicsWorld_a528a5fc5907a9bf3e8ab2bfe1be5b05f}
+
+
+get position of a specific body 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em number}]of the specific collision object within array \end{DoxyParams}
+\hypertarget{classPhysicsWorld_a9e9d15147f52d67384d197bdbfddbedf}{
+\index{PhysicsWorld@{PhysicsWorld}!getRotation@{getRotation}}
+\index{getRotation@{getRotation}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{getRotation}]{\setlength{\rightskip}{0pt plus 5cm}btQuaternion PhysicsWorld::getRotation (unsigned int {\em \_\-index})}}
+\label{classPhysicsWorld_a9e9d15147f52d67384d197bdbfddbedf}
+
+
+get rotation of a specific body 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em number}]of the specific collision object \end{DoxyParams}
+\hypertarget{classPhysicsWorld_acef2efa13c576073a2a907709114422d}{
+\index{PhysicsWorld@{PhysicsWorld}!getTransformMatrix@{getTransformMatrix}}
+\index{getTransformMatrix@{getTransformMatrix}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{getTransformMatrix}]{\setlength{\rightskip}{0pt plus 5cm}ngl::Mat4 PhysicsWorld::getTransformMatrix (unsigned int {\em \_\-index})}}
+\label{classPhysicsWorld_acef2efa13c576073a2a907709114422d}
+
+
+get transform for specific body 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em number}]of the specific collision object within array \end{DoxyParams}
+\hypertarget{classPhysicsWorld_aa70cfe601f4ee449c385027899e37b74}{
+\index{PhysicsWorld@{PhysicsWorld}!getUserData@{getUserData}}
+\index{getUserData@{getUserData}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{getUserData}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ PhysicsWorld::getUserData (unsigned int {\em \_\-index})}}
+\label{classPhysicsWorld_aa70cfe601f4ee449c385027899e37b74}
+
+
+user pointer 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em number}]of collision object in array \end{DoxyParams}
+\hypertarget{classPhysicsWorld_af4360b1fd73bccb9daad2f0e2e010324}{
+\index{PhysicsWorld@{PhysicsWorld}!removeBody@{removeBody}}
+\index{removeBody@{removeBody}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{removeBody}]{\setlength{\rightskip}{0pt plus 5cm}void PhysicsWorld::removeBody (unsigned int {\em \_\-index})}}
+\label{classPhysicsWorld_af4360b1fd73bccb9daad2f0e2e010324}
+
+
+remove rigid bodies 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em number}]of the rigid body in vector of bodies (m\_\-bodies) \end{DoxyParams}
+\hypertarget{classPhysicsWorld_a2cdbd862a8cd35eed77772fa870a3d83}{
+\index{PhysicsWorld@{PhysicsWorld}!setGravity@{setGravity}}
+\index{setGravity@{setGravity}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{setGravity}]{\setlength{\rightskip}{0pt plus 5cm}void PhysicsWorld::setGravity (ngl::Vec3 {\em \_\-g})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classPhysicsWorld_a2cdbd862a8cd35eed77772fa870a3d83}
+
+
+set gravity 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em vec3}]containing x, y and z strength \end{DoxyParams}
+\hypertarget{classPhysicsWorld_a0d04a6ac71656dbaa41394b3bfe9e4be}{
+\index{PhysicsWorld@{PhysicsWorld}!setGravity@{setGravity}}
+\index{setGravity@{setGravity}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{setGravity}]{\setlength{\rightskip}{0pt plus 5cm}void PhysicsWorld::setGravity (float {\em \_\-x}, \/  float {\em \_\-y}, \/  float {\em \_\-z})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classPhysicsWorld_a0d04a6ac71656dbaa41394b3bfe9e4be}
+
+
+set gravity 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em float}]for the x, y and z strength \end{DoxyParams}
+\hypertarget{classPhysicsWorld_abfbb11f5d5222deea4306838b2fb7c5e}{
+\index{PhysicsWorld@{PhysicsWorld}!setRot@{setRot}}
+\index{setRot@{setRot}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{setRot}]{\setlength{\rightskip}{0pt plus 5cm}void PhysicsWorld::setRot (unsigned int {\em \_\-index}, \/  btQuaternion {\em \_\-rot})}}
+\label{classPhysicsWorld_abfbb11f5d5222deea4306838b2fb7c5e}
+
+
+set rotation for a specific body 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em number}]of specific collision object in array \item[\mbox{$\leftarrow$} {\em quaternion}]for the rotation \end{DoxyParams}
+\hypertarget{classPhysicsWorld_aba35e36f54d2898d83b9fb57a1d00462}{
+\index{PhysicsWorld@{PhysicsWorld}!setRotAboutOrigin@{setRotAboutOrigin}}
+\index{setRotAboutOrigin@{setRotAboutOrigin}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{setRotAboutOrigin}]{\setlength{\rightskip}{0pt plus 5cm}void PhysicsWorld::setRotAboutOrigin (unsigned int {\em \_\-index}, \/  btQuaternion {\em \_\-rot})}}
+\label{classPhysicsWorld_aba35e36f54d2898d83b9fb57a1d00462}
+
+
+set rotation about the origin for a specific body 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em number}]of specific collision object in array \item[\mbox{$\leftarrow$} {\em quaternion}]for the rotation \end{DoxyParams}
+\hypertarget{classPhysicsWorld_a7c77049c55dd34a22437e961dbcf92bc}{
+\index{PhysicsWorld@{PhysicsWorld}!step@{step}}
+\index{step@{step}!PhysicsWorld@{PhysicsWorld}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}void PhysicsWorld::step (float {\em \_\-time}, \/  float {\em \_\-step})}}
+\label{classPhysicsWorld_a7c77049c55dd34a22437e961dbcf92bc}
+
+
+to step through the simulation 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em amount}]of time to step simulation by as a float (default 1/60th of asecond) \item[\mbox{$\leftarrow$} {\em amount}]of time steps \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{PhysicsWorld_8h}{PhysicsWorld.h}\item 
+src/\hyperlink{PhysicsWorld_8cpp}{PhysicsWorld.cpp}\end{DoxyCompactItemize}

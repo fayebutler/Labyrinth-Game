@@ -1,0 +1,110 @@
+\hypertarget{classCollisionShape}{
+\section{CollisionShape Class Reference}
+\label{classCollisionShape}\index{CollisionShape@{CollisionShape}}
+}
+
+
+Class to create the collisoin shapes for the objects in physics world.  
+
+
+{\ttfamily \#include $<$include/CollisionShape.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCollisionShape_aae7739c3bf1be44f3f8722cfe76bc8cc}{addSphere} (const std::string \&\_\-name, const std::string \&\_\-objFilePath)
+\begin{DoxyCompactList}\small\item\em create collision shape for a sphere \item\end{DoxyCompactList}\item 
+void \hyperlink{classCollisionShape_a61c367ab49609cb28636080853dd0a2c}{addMaze} (const std::string \&\_\-name, const std::string \&\_\-objFilePath)
+\begin{DoxyCompactList}\small\item\em create collision shape for maze \item\end{DoxyCompactList}\item 
+void \hyperlink{classCollisionShape_ad1f816e259bf91027c8e775f89ed76a4}{addBox} (const std::string \&\_\-name, const std::string \&\_\-objFilePath)
+\begin{DoxyCompactList}\small\item\em create collision shape for box \item\end{DoxyCompactList}\item 
+btCollisionShape $\ast$ \hyperlink{classCollisionShape_ac2fc5b4b07d9b6f6551d1e021e65626e}{getShape} (const std::string \&\_\-name)
+\begin{DoxyCompactList}\small\item\em returns collision shape \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCollisionShape_a419073488476916f9dba2dd97ae2bf76}{
+static \hyperlink{classCollisionShape}{CollisionShape} $\ast$ \hyperlink{classCollisionShape_a419073488476916f9dba2dd97ae2bf76}{instance} ()}
+\label{classCollisionShape_a419073488476916f9dba2dd97ae2bf76}
+
+\begin{DoxyCompactList}\small\item\em create an instance of a collision shape \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCollisionShape_a960ed2630ac29e6b28d773c97fab1d18}{
+\hyperlink{classCollisionShape_a960ed2630ac29e6b28d773c97fab1d18}{CollisionShape} ()}
+\label{classCollisionShape_a960ed2630ac29e6b28d773c97fab1d18}
+
+\begin{DoxyCompactList}\small\item\em ctor but unused \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCollisionShape_a5f99d1b09559f4c26cf699bdfd042676}{
+std::map$<$ std::string, btCollisionShape $\ast$ $>$ \hyperlink{classCollisionShape_a5f99d1b09559f4c26cf699bdfd042676}{m\_\-shapes}}
+\label{classCollisionShape_a5f99d1b09559f4c26cf699bdfd042676}
+
+\begin{DoxyCompactList}\small\item\em map to hold collision shapes and names \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCollisionShape_ab7309a9cab3da9e7e2fc7e7c1e1eaa26}{
+static \hyperlink{classCollisionShape}{CollisionShape} $\ast$ \hyperlink{classCollisionShape_ab7309a9cab3da9e7e2fc7e7c1e1eaa26}{s\_\-instance} = 0}
+\label{classCollisionShape_ab7309a9cab3da9e7e2fc7e7c1e1eaa26}
+
+\begin{DoxyCompactList}\small\item\em collision shape instance \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to create the collisoin shapes for the objects in physics world. \begin{DoxyAuthor}{Author}
+Faye Butler Modified from -\/ Jon Macey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/04/2014 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCollisionShape_ad1f816e259bf91027c8e775f89ed76a4}{
+\index{CollisionShape@{CollisionShape}!addBox@{addBox}}
+\index{addBox@{addBox}!CollisionShape@{CollisionShape}}
+\subsubsection[{addBox}]{\setlength{\rightskip}{0pt plus 5cm}void CollisionShape::addBox (const std::string \& {\em \_\-name}, \/  const std::string \& {\em \_\-objFilePath})}}
+\label{classCollisionShape_ad1f816e259bf91027c8e775f89ed76a4}
+
+
+create collision shape for box 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em name}]of shape as a string \item[\mbox{$\leftarrow$} {\em file}]path to the obj mesh as a string \end{DoxyParams}
+\hypertarget{classCollisionShape_a61c367ab49609cb28636080853dd0a2c}{
+\index{CollisionShape@{CollisionShape}!addMaze@{addMaze}}
+\index{addMaze@{addMaze}!CollisionShape@{CollisionShape}}
+\subsubsection[{addMaze}]{\setlength{\rightskip}{0pt plus 5cm}void CollisionShape::addMaze (const std::string \& {\em \_\-name}, \/  const std::string \& {\em \_\-objFilePath})}}
+\label{classCollisionShape_a61c367ab49609cb28636080853dd0a2c}
+
+
+create collision shape for maze 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em name}]of shape as a string \item[\mbox{$\leftarrow$} {\em file}]path to the obj mesh as a string \end{DoxyParams}
+\hypertarget{classCollisionShape_aae7739c3bf1be44f3f8722cfe76bc8cc}{
+\index{CollisionShape@{CollisionShape}!addSphere@{addSphere}}
+\index{addSphere@{addSphere}!CollisionShape@{CollisionShape}}
+\subsubsection[{addSphere}]{\setlength{\rightskip}{0pt plus 5cm}void CollisionShape::addSphere (const std::string \& {\em \_\-name}, \/  const std::string \& {\em \_\-objFilePath})}}
+\label{classCollisionShape_aae7739c3bf1be44f3f8722cfe76bc8cc}
+
+
+create collision shape for a sphere 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em name}]of shape as a string \item[\mbox{$\leftarrow$} {\em file}]path to the obj mesh as a string \end{DoxyParams}
+\hypertarget{classCollisionShape_ac2fc5b4b07d9b6f6551d1e021e65626e}{
+\index{CollisionShape@{CollisionShape}!getShape@{getShape}}
+\index{getShape@{getShape}!CollisionShape@{CollisionShape}}
+\subsubsection[{getShape}]{\setlength{\rightskip}{0pt plus 5cm}btCollisionShape $\ast$ CollisionShape::getShape (const std::string \& {\em \_\-name})}}
+\label{classCollisionShape_ac2fc5b4b07d9b6f6551d1e021e65626e}
+
+
+returns collision shape 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em name}]of shape as a string \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{CollisionShape_8h}{CollisionShape.h}\item 
+src/\hyperlink{CollisionShape_8cpp}{CollisionShape.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,33 @@
+\hypertarget{Text_8h}{
+\section{include/Text.h File Reference}
+\label{Text_8h}\index{include/Text.h@{include/Text.h}}
+}
+
+
+Basic text rendering for OpenGL 3.x.  
+{\ttfamily \#include $<$ngl/Vec2.h$>$}\par
+{\ttfamily \#include $<$ngl/VertexArrayObject.h$>$}\par
+{\ttfamily \#include $<$ngl/Colour.h$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structFontChar}{FontChar}
+\begin{DoxyCompactList}\small\item\em a structure to hold the font char texture id and the vao. The vao for each font will be a different size need to investigate is a scale would be quicker / more efficient than storing multiple billboards (some will be the same size) \item\end{DoxyCompactList}\item 
+class \hyperlink{classText}{Text}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic text rendering for OpenGL 3.x. \begin{DoxyAuthor}{Author}
+Jonathan Macey 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10/10/11 Initial version 
+\end{DoxyDate}
+\begin{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]support unicode ASCII is so 1980's ;-\/0 This class will generate billboard textures and VertexArrayObjects for each of the font glyphs, this means we need a valid OpenGL context before using this class, therefore it should be constructed in initalizeGL or after. Note for efficiency once the font has been created we can only change the colour, if you need different sizes / emphasis you will need to create a new \hyperlink{classText}{Text} object with the desired size / emphasis. This is accelerated as much as possible but text rendering will sometimes be slow as we bind a new texture for each char being drawn for more details look at the blog post here \href{http://jonmacey.blogspot.com/2011/10/text-rendering-using-opengl-32.html}{\tt http://jonmacey.blogspot.com/2011/10/text-\/rendering-\/using-\/opengl-\/32.html} \end{Desc}

@@ -1,0 +1,73 @@
+\hypertarget{main_8cpp}{
+\section{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+}
+
+
+main function  
+{\ttfamily \#include $<$SDL.h$>$}\par
+{\ttfamily \#include $<$cstdlib$>$}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include \char`\"{}NGLDraw.h\char`\"{}}\par
+{\ttfamily \#include $<$ngl/NGLInit.h$>$}\par
+{\ttfamily \#include $<$stack$>$}\par
+{\ttfamily \#include $<$sstream$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$boost/tokenizer.hpp$>$}\par
+{\ttfamily \#include $<$boost/lexical\_\-cast.hpp$>$}\par
+{\ttfamily \#include $<$boost/format.hpp$>$}\par
+{\ttfamily \#include $<$fstream$>$}\par
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{main_8cpp_a8b3b3c275eb46680d92090efb407c5df}{
+typedef boost::tokenizer$<$ boost::char\_\-separator$<$ char $>$ $>$ {\bfseries tokenizer}}
+\label{main_8cpp_a8b3b3c275eb46680d92090efb407c5df}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a2913e48f3b2449d53db8292db54accb4}{SDLErrorExit} (const std::string \&\_\-msg)
+\begin{DoxyCompactList}\small\item\em function to quit SDL with error message \item\end{DoxyCompactList}\item 
+\hypertarget{main_8cpp_a2dd6bc6e7e37743a91b7cf82e95be116}{
+SDL\_\-GLContext \hyperlink{main_8cpp_a2dd6bc6e7e37743a91b7cf82e95be116}{createOpenGLContext} (SDL\_\-Window $\ast$window)}
+\label{main_8cpp_a2dd6bc6e7e37743a91b7cf82e95be116}
+
+\begin{DoxyCompactList}\small\item\em initialize SDL OpenGL context \item\end{DoxyCompactList}\item 
+\hypertarget{main_8cpp_ae08db5795c276726f7c20b8db49a5689}{
+int {\bfseries ParseScore} (tokenizer::iterator \&\_\-firstWord)}
+\label{main_8cpp_ae08db5795c276726f7c20b8db49a5689}
+
+\item 
+\hypertarget{main_8cpp_af9f8b0fd8e32f40858caa52faa7edce4}{
+int {\bfseries ParseGravity} (tokenizer::iterator \&\_\-firstWord)}
+\label{main_8cpp_af9f8b0fd8e32f40858caa52faa7edce4}
+
+\item 
+\hypertarget{main_8cpp_a417056e65836d822267f4e790d6f9952}{
+float {\bfseries ParseFriction} (tokenizer::iterator \&\_\-firstWord)}
+\label{main_8cpp_a417056e65836d822267f4e790d6f9952}
+
+\item 
+\hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})}
+\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+main function 
+
+\subsection{Function Documentation}
+\hypertarget{main_8cpp_a2913e48f3b2449d53db8292db54accb4}{
+\index{main.cpp@{main.cpp}!SDLErrorExit@{SDLErrorExit}}
+\index{SDLErrorExit@{SDLErrorExit}!main.cpp@{main.cpp}}
+\subsubsection[{SDLErrorExit}]{\setlength{\rightskip}{0pt plus 5cm}void SDLErrorExit (const std::string \& {\em \_\-msg})}}
+\label{main_8cpp_a2913e48f3b2449d53db8292db54accb4}
+
+
+function to quit SDL with error message 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em \_\-msg}]the error message to send \end{DoxyParams}

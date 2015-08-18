@@ -1,0 +1,92 @@
+\hypertarget{classText}{
+\section{Text Class Reference}
+\label{classText}\index{Text@{Text}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classText_a5454ef14fc670f5ef68bdbe2fe2fad3b}{Text} (const std::string \&\_\-f, int \_\-size)
+\begin{DoxyCompactList}\small\item\em ctor must pass in a ready constructed QFont make sure the size and emphasis is set before doing this as you can't modify the font after construction and you will need a new \hyperlink{classText}{Text} class for each different type of text / font \item\end{DoxyCompactList}\item 
+\hypertarget{classText_a2d49e5c280e205125b149f7777ae30c7}{
+\hyperlink{classText_a2d49e5c280e205125b149f7777ae30c7}{$\sim$Text} ()}
+\label{classText_a2d49e5c280e205125b149f7777ae30c7}
+
+\begin{DoxyCompactList}\small\item\em dtor will clean / remove textures and VAO's for the class \item\end{DoxyCompactList}\item 
+void \hyperlink{classText_a3d0591d0b3a6bd73543cb8637fbe91e5}{renderText} (float \_\-x, float \_\-y, const std::string \&\_\-text) const 
+\begin{DoxyCompactList}\small\item\em render the text to the screen at \_\-x,\_\-y where 0,0 is top left of the screen all positioning is relative to the screen size set with the setScreenSize method so it is important that changes in screen size are updated. These value will be sent to the nglTextShader to be rendered (see source ) \item\end{DoxyCompactList}\item 
+void \hyperlink{classText_adf20a23bc781824e83dc50c121f56aea}{setScreenSize} (int \_\-w, int \_\-h)
+\begin{DoxyCompactList}\small\item\em set the size of the screen to scale our font to fit correctly this basically creates the orthographic projection needed for x/y assuming that the openGL window has 0,0 at the center and we use NDC co-\/ordinates -\/1 -\/$>$ 1 in X and Y we then get x=(x$\ast$xScale)+xtran y=(y$\ast$yScale)+ytrans; to place the text in screen space \item\end{DoxyCompactList}\item 
+void \hyperlink{classText_ad898e1ff3c2221029c115ed5de7f1b72}{setColour} (const ngl::Colour \&\_\-c)
+\begin{DoxyCompactList}\small\item\em set the colour of the font from an Colour \item\end{DoxyCompactList}\item 
+void \hyperlink{classText_ae2ce0fc28fdfccc2842487d5be64e12a}{setColour} (ngl::Real \_\-r, ngl::Real \_\-g, ngl::Real \_\-b)
+\begin{DoxyCompactList}\small\item\em set the colour of the font from three floats as a convenience method \item\end{DoxyCompactList}\item 
+\hypertarget{classText_a6ec9d77b284824829150b8ebb436c358}{
+void {\bfseries setTransform} (float \_\-x, float \_\-y)}
+\label{classText_a6ec9d77b284824829150b8ebb436c358}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classText_a5454ef14fc670f5ef68bdbe2fe2fad3b}{
+\index{Text@{Text}!Text@{Text}}
+\index{Text@{Text}!Text@{Text}}
+\subsubsection[{Text}]{\setlength{\rightskip}{0pt plus 5cm}Text::Text (const std::string \& {\em \_\-f}, \/  int {\em \_\-size})}}
+\label{classText_a5454ef14fc670f5ef68bdbe2fe2fad3b}
+
+
+ctor must pass in a ready constructed QFont make sure the size and emphasis is set before doing this as you can't modify the font after construction and you will need a new \hyperlink{classText}{Text} class for each different type of text / font 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em \_\-f}]the font to use for drawing the text \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classText_a3d0591d0b3a6bd73543cb8637fbe91e5}{
+\index{Text@{Text}!renderText@{renderText}}
+\index{renderText@{renderText}!Text@{Text}}
+\subsubsection[{renderText}]{\setlength{\rightskip}{0pt plus 5cm}void Text::renderText (float {\em \_\-x}, \/  float {\em \_\-y}, \/  const std::string \& {\em \_\-text}) const}}
+\label{classText_a3d0591d0b3a6bd73543cb8637fbe91e5}
+
+
+render the text to the screen at \_\-x,\_\-y where 0,0 is top left of the screen all positioning is relative to the screen size set with the setScreenSize method so it is important that changes in screen size are updated. These value will be sent to the nglTextShader to be rendered (see source ) \begin{DoxyNote}{Note}
+font quad is drawn as 0,0 being bottom left so if we draw at 0,0 the font will not be visible, we need to add the offset of the font height to any y value (i.e. a 16pt font drawn at 0,16 will appear at top right of the screen) 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em \_\-x}]the x position of the text in screen space \item[\mbox{$\leftarrow$} {\em \_\-y}]the y position of the text in screen space \item[\mbox{$\leftarrow$} {\em \_\-text}]the text to draw (this is limited to ASCII chars ' '-\/$>$'$\sim$' at present but unicode will be done soon \end{DoxyParams}
+\hypertarget{classText_ae2ce0fc28fdfccc2842487d5be64e12a}{
+\index{Text@{Text}!setColour@{setColour}}
+\index{setColour@{setColour}!Text@{Text}}
+\subsubsection[{setColour}]{\setlength{\rightskip}{0pt plus 5cm}void Text::setColour (ngl::Real {\em \_\-r}, \/  ngl::Real {\em \_\-g}, \/  ngl::Real {\em \_\-b})}}
+\label{classText_ae2ce0fc28fdfccc2842487d5be64e12a}
+
+
+set the colour of the font from three floats as a convenience method 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em \_\-r}]the red component of the colour for the font \item[\mbox{$\leftarrow$} {\em \_\-g}]the green component of the colour for the font \item[\mbox{$\leftarrow$} {\em \_\-b}]the blue component of the colour for the font \end{DoxyParams}
+\hypertarget{classText_ad898e1ff3c2221029c115ed5de7f1b72}{
+\index{Text@{Text}!setColour@{setColour}}
+\index{setColour@{setColour}!Text@{Text}}
+\subsubsection[{setColour}]{\setlength{\rightskip}{0pt plus 5cm}void Text::setColour (const ngl::Colour \& {\em \_\-c})}}
+\label{classText_ad898e1ff3c2221029c115ed5de7f1b72}
+
+
+set the colour of the font from an Colour 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em \_\-c}]the colour to set for the font (alpha is overridden by the texture) \end{DoxyParams}
+\hypertarget{classText_adf20a23bc781824e83dc50c121f56aea}{
+\index{Text@{Text}!setScreenSize@{setScreenSize}}
+\index{setScreenSize@{setScreenSize}!Text@{Text}}
+\subsubsection[{setScreenSize}]{\setlength{\rightskip}{0pt plus 5cm}void Text::setScreenSize (int {\em \_\-w}, \/  int {\em \_\-h})}}
+\label{classText_adf20a23bc781824e83dc50c121f56aea}
+
+
+set the size of the screen to scale our font to fit correctly this basically creates the orthographic projection needed for x/y assuming that the openGL window has 0,0 at the center and we use NDC co-\/ordinates -\/1 -\/$>$ 1 in X and Y we then get x=(x$\ast$xScale)+xtran y=(y$\ast$yScale)+ytrans; to place the text in screen space 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em \_\-w}]the current width of the screen \item[\mbox{$\leftarrow$} {\em \_\-h}]the current height of the screen \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Text_8h}{Text.h}\item 
+src/Text.cpp\end{DoxyCompactItemize}

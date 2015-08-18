@@ -1,0 +1,398 @@
+\hypertarget{classNGLDraw}{
+\section{NGLDraw Class Reference}
+\label{classNGLDraw}\index{NGLDraw@{NGLDraw}}
+}
+
+
+\hyperlink{classNGLDraw}{NGLDraw} constructors, destructors and methods.  
+
+
+{\ttfamily \#include $<$include/NGLDraw.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNGLDraw_ad656ac3d12043d9fbb59985db83e5b52}{
+\hyperlink{classNGLDraw_ad656ac3d12043d9fbb59985db83e5b52}{NGLDraw} ()}
+\label{classNGLDraw_ad656ac3d12043d9fbb59985db83e5b52}
+
+\begin{DoxyCompactList}\small\item\em ctor this will have a valid OpenGL context so we can create gl stuff \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_af711def4043fa15686998fca20f0697b}{
+\hyperlink{classNGLDraw_af711def4043fa15686998fca20f0697b}{$\sim$NGLDraw} ()}
+\label{classNGLDraw_af711def4043fa15686998fca20f0697b}
+
+\begin{DoxyCompactList}\small\item\em dtor used to remove any NGL stuff created \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_ae5151dc189fd5de5649b72c5e76bcf47}{resize} (int \_\-w, int \_\-h)
+\begin{DoxyCompactList}\small\item\em resize our screen and set the camera aspect ratio \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_aec8a377329da67db1e2ef007bd27f026}{
+void \hyperlink{classNGLDraw_aec8a377329da67db1e2ef007bd27f026}{draw} ()}
+\label{classNGLDraw_aec8a377329da67db1e2ef007bd27f026}
+
+\begin{DoxyCompactList}\small\item\em draw the scene \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_a7950c9e9bfd16dc9b6075881396df876}{mouseMoveEvent} (const SDL\_\-MouseMotionEvent \&\_\-event)
+\begin{DoxyCompactList}\small\item\em this method is called every time a mouse is moved \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_a1b20896f4aac3cddd5ea2f977410a19f}{mousePressEvent} (const SDL\_\-MouseButtonEvent \&\_\-event)
+\begin{DoxyCompactList}\small\item\em this method is called every time a mouse button is presses \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_aa41eba2e6fd12011cdd62a7db8f7f84e}{mouseReleaseEvent} (const SDL\_\-MouseButtonEvent \&\_\-event)
+\begin{DoxyCompactList}\small\item\em this method is called everytime the mouse button is released \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_a8782a682c3a362baa3b18882f49c95ed}{wheelEvent} (const SDL\_\-MouseWheelEvent \&\_\-event)
+\begin{DoxyCompactList}\small\item\em this method is called everytime the mouse wheel is moved \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_af568498c828386ab732bbbde37ccf607}{setPhysics} (int \_\-gravityY, float \_\-friction)
+\begin{DoxyCompactList}\small\item\em method to create the physics world \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_a9c926f68084a0c0635bf46fe19bc253c}{rotateMazeXDOWN} (float angleUpdate)
+\begin{DoxyCompactList}\small\item\em method to rotate down in the x direction \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_a52716a5b69085b95eec3f0a554d0442e}{rotateMazeZRIGHT} (float angleUpdate)
+\begin{DoxyCompactList}\small\item\em method to rotate right in the z direction \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_aaf8beae970dc7a77cb7bfd56b875c412}{rotateMazeXUP} (float angleUpdate)
+\begin{DoxyCompactList}\small\item\em method to rotate up in the x direction \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_a85f7d53c6fc180ca96a916d859e054da}{rotateMazeZLEFT} (float angleUpdate)
+\begin{DoxyCompactList}\small\item\em method to rotate left in the z direction \item\end{DoxyCompactList}\item 
+bool \hyperlink{classNGLDraw_a2063f77a75af245c035db344e14dcff6}{lose} (float \_\-friction)
+\begin{DoxyCompactList}\small\item\em method to test if player has lost (returns true or false) \item\end{DoxyCompactList}\item 
+bool \hyperlink{classNGLDraw_a973c98c0b531ffb824913d6753948508}{win} (float \_\-friction)
+\begin{DoxyCompactList}\small\item\em method to test if player has won (returns true or false) \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_a1019ca5abe411c3111cbe3f77e8218b6}{text} (std::string \_\-text)
+\begin{DoxyCompactList}\small\item\em method to render text \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_a11a65720f14b3b58173c23daf8013e7c}{createball} (float \_\-friction)
+\begin{DoxyCompactList}\small\item\em method to create more balls \item\end{DoxyCompactList}\item 
+void \hyperlink{classNGLDraw_a79b107d9d00406530f7693159c6afdad}{setGameState} (int const \_\-state)
+\begin{DoxyCompactList}\small\item\em set the game state (start/game/win/lose) \item\end{DoxyCompactList}\item 
+int \hyperlink{classNGLDraw_a3f6d511c845e8855366d3007c73a8162}{getGameState} () const 
+\begin{DoxyCompactList}\small\item\em get what state the game is in (start/game/win/lose) \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ad73f75d8409c2a4f057dda554c3a5a18}{
+\hyperlink{classPhysicsWorld}{PhysicsWorld} $\ast$ \hyperlink{classNGLDraw_ad73f75d8409c2a4f057dda554c3a5a18}{getPhysicsWorld} ()}
+\label{classNGLDraw_ad73f75d8409c2a4f057dda554c3a5a18}
+
+\begin{DoxyCompactList}\small\item\em return physics world \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNGLDraw_a60d347a21f883b1ef137bb8f823bc44c}{
+void \hyperlink{classNGLDraw_a60d347a21f883b1ef137bb8f823bc44c}{loadMatricesToPhongShader} ()}
+\label{classNGLDraw_a60d347a21f883b1ef137bb8f823bc44c}
+
+\begin{DoxyCompactList}\small\item\em method to load transform data to the shaders \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ad1fb1942df0b726c6e6305a2d42b975e}{
+void \hyperlink{classNGLDraw_ad1fb1942df0b726c6e6305a2d42b975e}{loadMatricesToTextureShader} ()}
+\label{classNGLDraw_ad1fb1942df0b726c6e6305a2d42b975e}
+
+\begin{DoxyCompactList}\small\item\em method to load transform data to the shaders \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNGLDraw_a333a68dffb2f17de902059bdde7d1d55}{
+int \hyperlink{classNGLDraw_a333a68dffb2f17de902059bdde7d1d55}{m\_\-spinXFace}}
+\label{classNGLDraw_a333a68dffb2f17de902059bdde7d1d55}
+
+\begin{DoxyCompactList}\small\item\em used to store the x rotation mouse value \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a18af23a99a457663dd95efeb7e7b3455}{
+int \hyperlink{classNGLDraw_a18af23a99a457663dd95efeb7e7b3455}{m\_\-spinYFace}}
+\label{classNGLDraw_a18af23a99a457663dd95efeb7e7b3455}
+
+\begin{DoxyCompactList}\small\item\em used to store the y rotation mouse value \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ae6da031d343135a463a5aa4892447d78}{
+bool \hyperlink{classNGLDraw_ae6da031d343135a463a5aa4892447d78}{m\_\-rotate}}
+\label{classNGLDraw_ae6da031d343135a463a5aa4892447d78}
+
+\begin{DoxyCompactList}\small\item\em flag to indicate if the mouse button is pressed when dragging \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ad549b3e151ea79b8c7a29f8b55188e74}{
+bool \hyperlink{classNGLDraw_ad549b3e151ea79b8c7a29f8b55188e74}{m\_\-translate}}
+\label{classNGLDraw_ad549b3e151ea79b8c7a29f8b55188e74}
+
+\begin{DoxyCompactList}\small\item\em flag to indicate if the Right mouse button is pressed when dragging \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ada7472b4a58d4062efdd74c39f0909b7}{
+int \hyperlink{classNGLDraw_ada7472b4a58d4062efdd74c39f0909b7}{m\_\-origX}}
+\label{classNGLDraw_ada7472b4a58d4062efdd74c39f0909b7}
+
+\begin{DoxyCompactList}\small\item\em the previous x mouse value \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a0a5256c5495d42796ac03b98655a2040}{
+int \hyperlink{classNGLDraw_a0a5256c5495d42796ac03b98655a2040}{m\_\-origY}}
+\label{classNGLDraw_a0a5256c5495d42796ac03b98655a2040}
+
+\begin{DoxyCompactList}\small\item\em the previous y mouse value \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a5fba1120bcef1ec56a7687270510f8d7}{
+int \hyperlink{classNGLDraw_a5fba1120bcef1ec56a7687270510f8d7}{m\_\-origZ}}
+\label{classNGLDraw_a5fba1120bcef1ec56a7687270510f8d7}
+
+\begin{DoxyCompactList}\small\item\em the previous z mouse value \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a2145fe76e0b468fd4ec2c3832018037f}{
+int \hyperlink{classNGLDraw_a2145fe76e0b468fd4ec2c3832018037f}{m\_\-origXPos}}
+\label{classNGLDraw_a2145fe76e0b468fd4ec2c3832018037f}
+
+\begin{DoxyCompactList}\small\item\em the previous x mouse value for Position changes \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ace90d67bf9444364656f329b9a80c234}{
+int \hyperlink{classNGLDraw_ace90d67bf9444364656f329b9a80c234}{m\_\-origYPos}}
+\label{classNGLDraw_ace90d67bf9444364656f329b9a80c234}
+
+\begin{DoxyCompactList}\small\item\em the previous y mouse value for Position changes \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ac7368aa2afeab2c0061d07801ca31990}{
+int \hyperlink{classNGLDraw_ac7368aa2afeab2c0061d07801ca31990}{m\_\-origZPos}}
+\label{classNGLDraw_ac7368aa2afeab2c0061d07801ca31990}
+
+\begin{DoxyCompactList}\small\item\em the previous z mouse value for Position changes \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_add58d5447775b9c8eef3cbd6a45d2581}{
+ngl::Mat4 \hyperlink{classNGLDraw_add58d5447775b9c8eef3cbd6a45d2581}{m\_\-mouseGlobalTX}}
+\label{classNGLDraw_add58d5447775b9c8eef3cbd6a45d2581}
+
+\begin{DoxyCompactList}\small\item\em used to store the global mouse transforms \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a080ff0bfec61d47166d71c6b555e0f6d}{
+ngl::Camera $\ast$ \hyperlink{classNGLDraw_a080ff0bfec61d47166d71c6b555e0f6d}{m\_\-cam}}
+\label{classNGLDraw_a080ff0bfec61d47166d71c6b555e0f6d}
+
+\begin{DoxyCompactList}\small\item\em Our Camera. \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ac5d0f5ee9300506e19196866a89e532d}{
+ngl::TransformStack \hyperlink{classNGLDraw_ac5d0f5ee9300506e19196866a89e532d}{m\_\-transformStack}}
+\label{classNGLDraw_ac5d0f5ee9300506e19196866a89e532d}
+
+\begin{DoxyCompactList}\small\item\em transformation stack for the gl transformations etc \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a402443700f5c74bc715fc4959dc3d748}{
+ngl::Vec3 \hyperlink{classNGLDraw_a402443700f5c74bc715fc4959dc3d748}{m\_\-modelPos}}
+\label{classNGLDraw_a402443700f5c74bc715fc4959dc3d748}
+
+\begin{DoxyCompactList}\small\item\em the model position for mouse movement \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ac9b771b3fe87d387319e4a779f4cc4e6}{
+ngl::Light $\ast$ \hyperlink{classNGLDraw_ac9b771b3fe87d387319e4a779f4cc4e6}{m\_\-light}}
+\label{classNGLDraw_ac9b771b3fe87d387319e4a779f4cc4e6}
+
+\begin{DoxyCompactList}\small\item\em a simple light use to illuminate the screen \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_acc363ef7c9a437c97920f6e117b763f1}{
+\hyperlink{classPhysicsWorld}{PhysicsWorld} $\ast$ \hyperlink{classNGLDraw_acc363ef7c9a437c97920f6e117b763f1}{m\_\-physics}}
+\label{classNGLDraw_acc363ef7c9a437c97920f6e117b763f1}
+
+\begin{DoxyCompactList}\small\item\em physics world \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a6c10720ed7392b885059ba5d06cc0fc8}{
+ngl::Mat4 \hyperlink{classNGLDraw_a6c10720ed7392b885059ba5d06cc0fc8}{m\_\-bodyTransform}}
+\label{classNGLDraw_a6c10720ed7392b885059ba5d06cc0fc8}
+
+\begin{DoxyCompactList}\small\item\em trasnform of body \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a1e2de1a64477ee5b95723347a093ed89}{
+ngl::Obj $\ast$ \hyperlink{classNGLDraw_a1e2de1a64477ee5b95723347a093ed89}{m\_\-sphereMesh}}
+\label{classNGLDraw_a1e2de1a64477ee5b95723347a093ed89}
+
+\begin{DoxyCompactList}\small\item\em sphere obj mesh \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ac81ef39689766fabec9b85db89e48de6}{
+ngl::Obj $\ast$ \hyperlink{classNGLDraw_ac81ef39689766fabec9b85db89e48de6}{m\_\-mazeMesh}}
+\label{classNGLDraw_ac81ef39689766fabec9b85db89e48de6}
+
+\begin{DoxyCompactList}\small\item\em maze obj mesh \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ac2b121504241872fb886fbd38f238ddd}{
+ngl::Obj $\ast$ \hyperlink{classNGLDraw_ac2b121504241872fb886fbd38f238ddd}{m\_\-cube}}
+\label{classNGLDraw_ac2b121504241872fb886fbd38f238ddd}
+
+\begin{DoxyCompactList}\small\item\em cube obj mesh \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ac4a9e704c4d695e2673d8de6c6d2aa85}{
+\hyperlink{classText}{Text} $\ast$ \hyperlink{classNGLDraw_ac4a9e704c4d695e2673d8de6c6d2aa85}{m\_\-text}}
+\label{classNGLDraw_ac4a9e704c4d695e2673d8de6c6d2aa85}
+
+\begin{DoxyCompactList}\small\item\em larger text for titles \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a336166d6fdfd52559adcd5f2f0a608bc}{
+\hyperlink{classText}{Text} $\ast$ \hyperlink{classNGLDraw_a336166d6fdfd52559adcd5f2f0a608bc}{m\_\-bodyText}}
+\label{classNGLDraw_a336166d6fdfd52559adcd5f2f0a608bc}
+
+\begin{DoxyCompactList}\small\item\em smaller text for body \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a2ac310fa93339b783cdf96e6c2eb566e}{
+int \hyperlink{classNGLDraw_a2ac310fa93339b783cdf96e6c2eb566e}{m\_\-angleOrig}}
+\label{classNGLDraw_a2ac310fa93339b783cdf96e6c2eb566e}
+
+\begin{DoxyCompactList}\small\item\em original angle for rotation \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a56d3edae7841d521744967a443dfed60}{
+int \hyperlink{classNGLDraw_a56d3edae7841d521744967a443dfed60}{m\_\-state}}
+\label{classNGLDraw_a56d3edae7841d521744967a443dfed60}
+
+\begin{DoxyCompactList}\small\item\em what state the game is in \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a9c6aa3bddecdd4ce48c42d92cb6c26b0}{
+bool \hyperlink{classNGLDraw_a9c6aa3bddecdd4ce48c42d92cb6c26b0}{m\_\-lost}}
+\label{classNGLDraw_a9c6aa3bddecdd4ce48c42d92cb6c26b0}
+
+\begin{DoxyCompactList}\small\item\em if player has lost \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_ae823c04d494102ab367e4ed04f545b48}{
+bool \hyperlink{classNGLDraw_ae823c04d494102ab367e4ed04f545b48}{m\_\-win}}
+\label{classNGLDraw_ae823c04d494102ab367e4ed04f545b48}
+
+\begin{DoxyCompactList}\small\item\em if player has won \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a7acce7bc4f5cf7560e261d4e58af7de5}{
+unsigned int \hyperlink{classNGLDraw_a7acce7bc4f5cf7560e261d4e58af7de5}{m\_\-mazeTexture}}
+\label{classNGLDraw_a7acce7bc4f5cf7560e261d4e58af7de5}
+
+\begin{DoxyCompactList}\small\item\em texture for the maze \item\end{DoxyCompactList}\item 
+\hypertarget{classNGLDraw_a7aa4c080fb4b41d0996304227d6b63d2}{
+ngl::Vec3 \hyperlink{classNGLDraw_a7aa4c080fb4b41d0996304227d6b63d2}{m\_\-gravity}}
+\label{classNGLDraw_a7aa4c080fb4b41d0996304227d6b63d2}
+
+\begin{DoxyCompactList}\small\item\em vec3 to set gravity \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classNGLDraw}{NGLDraw} constructors, destructors and methods. \begin{DoxyAuthor}{Author}
+Faye Butler Modified from -\/ Jon Macey 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/04/2014 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classNGLDraw_a11a65720f14b3b58173c23daf8013e7c}{
+\index{NGLDraw@{NGLDraw}!createball@{createball}}
+\index{createball@{createball}!NGLDraw@{NGLDraw}}
+\subsubsection[{createball}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::createball (float {\em \_\-friction})}}
+\label{classNGLDraw_a11a65720f14b3b58173c23daf8013e7c}
+
+
+method to create more balls 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-friction}]is the strength of the friction read from the config file \end{DoxyParams}
+\hypertarget{classNGLDraw_a3f6d511c845e8855366d3007c73a8162}{
+\index{NGLDraw@{NGLDraw}!getGameState@{getGameState}}
+\index{getGameState@{getGameState}!NGLDraw@{NGLDraw}}
+\subsubsection[{getGameState}]{\setlength{\rightskip}{0pt plus 5cm}int NGLDraw::getGameState () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classNGLDraw_a3f6d511c845e8855366d3007c73a8162}
+
+
+get what state the game is in (start/game/win/lose) 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-state}]what state the game is in \end{DoxyParams}
+\hypertarget{classNGLDraw_a2063f77a75af245c035db344e14dcff6}{
+\index{NGLDraw@{NGLDraw}!lose@{lose}}
+\index{lose@{lose}!NGLDraw@{NGLDraw}}
+\subsubsection[{lose}]{\setlength{\rightskip}{0pt plus 5cm}bool NGLDraw::lose (float {\em \_\-friction})}}
+\label{classNGLDraw_a2063f77a75af245c035db344e14dcff6}
+
+
+method to test if player has lost (returns true or false) 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-friction}]is the strength of the friction read from the config file \end{DoxyParams}
+\hypertarget{classNGLDraw_a7950c9e9bfd16dc9b6075881396df876}{
+\index{NGLDraw@{NGLDraw}!mouseMoveEvent@{mouseMoveEvent}}
+\index{mouseMoveEvent@{mouseMoveEvent}!NGLDraw@{NGLDraw}}
+\subsubsection[{mouseMoveEvent}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::mouseMoveEvent (const SDL\_\-MouseMotionEvent \& {\em \_\-event})}}
+\label{classNGLDraw_a7950c9e9bfd16dc9b6075881396df876}
+
+
+this method is called every time a mouse is moved 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-event}]the SDL mouse event structure containing all mouse info \end{DoxyParams}
+\hypertarget{classNGLDraw_a1b20896f4aac3cddd5ea2f977410a19f}{
+\index{NGLDraw@{NGLDraw}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!NGLDraw@{NGLDraw}}
+\subsubsection[{mousePressEvent}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::mousePressEvent (const SDL\_\-MouseButtonEvent \& {\em \_\-event})}}
+\label{classNGLDraw_a1b20896f4aac3cddd5ea2f977410a19f}
+
+
+this method is called every time a mouse button is presses 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-event}]the SDL mouse event structure containing all mouse info \end{DoxyParams}
+\hypertarget{classNGLDraw_aa41eba2e6fd12011cdd62a7db8f7f84e}{
+\index{NGLDraw@{NGLDraw}!mouseReleaseEvent@{mouseReleaseEvent}}
+\index{mouseReleaseEvent@{mouseReleaseEvent}!NGLDraw@{NGLDraw}}
+\subsubsection[{mouseReleaseEvent}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::mouseReleaseEvent (const SDL\_\-MouseButtonEvent \& {\em \_\-event})}}
+\label{classNGLDraw_aa41eba2e6fd12011cdd62a7db8f7f84e}
+
+
+this method is called everytime the mouse button is released 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-event}]the SDL mouse event structure containing all mouse info \end{DoxyParams}
+\hypertarget{classNGLDraw_ae5151dc189fd5de5649b72c5e76bcf47}{
+\index{NGLDraw@{NGLDraw}!resize@{resize}}
+\index{resize@{resize}!NGLDraw@{NGLDraw}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::resize (int {\em \_\-w}, \/  int {\em \_\-h})}}
+\label{classNGLDraw_ae5151dc189fd5de5649b72c5e76bcf47}
+
+
+resize our screen and set the camera aspect ratio 
+\begin{DoxyParams}{Parameters}
+\item[\mbox{$\leftarrow$} {\em \_\-w}]the new width \item[\mbox{$\leftarrow$} {\em \_\-h}]the new height \end{DoxyParams}
+\hypertarget{classNGLDraw_a9c926f68084a0c0635bf46fe19bc253c}{
+\index{NGLDraw@{NGLDraw}!rotateMazeXDOWN@{rotateMazeXDOWN}}
+\index{rotateMazeXDOWN@{rotateMazeXDOWN}!NGLDraw@{NGLDraw}}
+\subsubsection[{rotateMazeXDOWN}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::rotateMazeXDOWN (float {\em angleUpdate})}}
+\label{classNGLDraw_a9c926f68084a0c0635bf46fe19bc253c}
+
+
+method to rotate down in the x direction 
+\begin{DoxyParams}{Parameters}
+\item[{\em angleUpdate}]is the amount to increase the angle of rotation by each time \end{DoxyParams}
+\hypertarget{classNGLDraw_aaf8beae970dc7a77cb7bfd56b875c412}{
+\index{NGLDraw@{NGLDraw}!rotateMazeXUP@{rotateMazeXUP}}
+\index{rotateMazeXUP@{rotateMazeXUP}!NGLDraw@{NGLDraw}}
+\subsubsection[{rotateMazeXUP}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::rotateMazeXUP (float {\em angleUpdate})}}
+\label{classNGLDraw_aaf8beae970dc7a77cb7bfd56b875c412}
+
+
+method to rotate up in the x direction 
+\begin{DoxyParams}{Parameters}
+\item[{\em angleUpdate}]is the amount to increase the angle of rotation by each time \end{DoxyParams}
+\hypertarget{classNGLDraw_a85f7d53c6fc180ca96a916d859e054da}{
+\index{NGLDraw@{NGLDraw}!rotateMazeZLEFT@{rotateMazeZLEFT}}
+\index{rotateMazeZLEFT@{rotateMazeZLEFT}!NGLDraw@{NGLDraw}}
+\subsubsection[{rotateMazeZLEFT}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::rotateMazeZLEFT (float {\em angleUpdate})}}
+\label{classNGLDraw_a85f7d53c6fc180ca96a916d859e054da}
+
+
+method to rotate left in the z direction 
+\begin{DoxyParams}{Parameters}
+\item[{\em angleUpdate}]is the amount to increase the angle of rotation by each time \end{DoxyParams}
+\hypertarget{classNGLDraw_a52716a5b69085b95eec3f0a554d0442e}{
+\index{NGLDraw@{NGLDraw}!rotateMazeZRIGHT@{rotateMazeZRIGHT}}
+\index{rotateMazeZRIGHT@{rotateMazeZRIGHT}!NGLDraw@{NGLDraw}}
+\subsubsection[{rotateMazeZRIGHT}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::rotateMazeZRIGHT (float {\em angleUpdate})}}
+\label{classNGLDraw_a52716a5b69085b95eec3f0a554d0442e}
+
+
+method to rotate right in the z direction 
+\begin{DoxyParams}{Parameters}
+\item[{\em angleUpdate}]is the amount to increase the angle of rotation by each time \end{DoxyParams}
+\hypertarget{classNGLDraw_a79b107d9d00406530f7693159c6afdad}{
+\index{NGLDraw@{NGLDraw}!setGameState@{setGameState}}
+\index{setGameState@{setGameState}!NGLDraw@{NGLDraw}}
+\subsubsection[{setGameState}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::setGameState (int const  {\em \_\-state})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classNGLDraw_a79b107d9d00406530f7693159c6afdad}
+
+
+set the game state (start/game/win/lose) 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-state}]what state game should be set to \end{DoxyParams}
+\hypertarget{classNGLDraw_af568498c828386ab732bbbde37ccf607}{
+\index{NGLDraw@{NGLDraw}!setPhysics@{setPhysics}}
+\index{setPhysics@{setPhysics}!NGLDraw@{NGLDraw}}
+\subsubsection[{setPhysics}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::setPhysics (int {\em \_\-gravityY}, \/  float {\em \_\-friction})}}
+\label{classNGLDraw_af568498c828386ab732bbbde37ccf607}
+
+
+method to create the physics world 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-gravityY}]is the strength of gravity in the Y direction read from the config file \item[{\em \_\-friction}]is the strength of the friction read from the config file \end{DoxyParams}
+\hypertarget{classNGLDraw_a1019ca5abe411c3111cbe3f77e8218b6}{
+\index{NGLDraw@{NGLDraw}!text@{text}}
+\index{text@{text}!NGLDraw@{NGLDraw}}
+\subsubsection[{text}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::text (std::string {\em \_\-text})}}
+\label{classNGLDraw_a1019ca5abe411c3111cbe3f77e8218b6}
+
+
+method to render text 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-text}]string of text to render \end{DoxyParams}
+\hypertarget{classNGLDraw_a8782a682c3a362baa3b18882f49c95ed}{
+\index{NGLDraw@{NGLDraw}!wheelEvent@{wheelEvent}}
+\index{wheelEvent@{wheelEvent}!NGLDraw@{NGLDraw}}
+\subsubsection[{wheelEvent}]{\setlength{\rightskip}{0pt plus 5cm}void NGLDraw::wheelEvent (const SDL\_\-MouseWheelEvent \& {\em \_\-event})}}
+\label{classNGLDraw_a8782a682c3a362baa3b18882f49c95ed}
+
+
+this method is called everytime the mouse wheel is moved 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-event}]the SDL mouse event structure containing all mouse info \end{DoxyParams}
+\hypertarget{classNGLDraw_a973c98c0b531ffb824913d6753948508}{
+\index{NGLDraw@{NGLDraw}!win@{win}}
+\index{win@{win}!NGLDraw@{NGLDraw}}
+\subsubsection[{win}]{\setlength{\rightskip}{0pt plus 5cm}bool NGLDraw::win (float {\em \_\-friction})}}
+\label{classNGLDraw_a973c98c0b531ffb824913d6753948508}
+
+
+method to test if player has won (returns true or false) 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-friction}]is the strength of the friction read from the config file \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{NGLDraw_8h}{NGLDraw.h}\item 
+src/\hyperlink{NGLDraw_8cpp}{NGLDraw.cpp}\end{DoxyCompactItemize}
